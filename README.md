@@ -2,9 +2,9 @@
 
 ## O que o programa faz
 
-Este projeto é uma mini CLI que pede o nome do usuário no terminal e mostra uma saudação.
+Este projeto é uma mini CLI que pede o nome do usuário no terminal e mostra uma saudação formal ou informal.
 
-O programa mostra um cabeçalho, remove espaços no começo e no fim do nome e formata as palavras com letra inicial maiúscula.
+O programa mostra um cabeçalho, remove espaços no começo e no fim do nome, formata as palavras com letra inicial maiúscula e permite escolher o tipo de saudação.
 
 ## Como rodar no terminal
 
@@ -25,15 +25,20 @@ python test_main.py
 ```text
 === Saudação com Nome ===
 Qual é o seu nome? christian frank
+Tipo de saudação (formal ou informal): informal
 Olá, Christian Frank. Bem-vindo à sua jornada builder.
 ```
+
+Para usar a opção informal, digite `informal`.
+
+Para usar a opção formal, digite `formal`.
 
 Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para rodar novamente.
 
 ## Estrutura do código
 
 - `tratar_nome(nome)`: remove espaços no começo/fim e formata o nome com iniciais maiúsculas.
-- `criar_saudacao(nome)`: devolve a mensagem correta.
+- `criar_saudacao(nome, tipo)`: devolve a mensagem correta.
 - `main()`: coordena o fluxo do programa.
 
 ## Conceitos aprendidos até agora
