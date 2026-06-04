@@ -40,6 +40,13 @@ def test_pedir_tipo_saudacao_tenta_ate_ser_valido():
     assert resultado == "formal"
 
 
+def test_pedir_tipo_saudacao_aceita_sair():
+    with patch("builtins.input", return_value=" Sair "):
+        resultado = pedir_tipo_saudacao()
+
+    assert resultado == "sair"
+
+
 def main():
     test_criar_saudacao_informal()
     test_criar_saudacao_formal()
@@ -48,6 +55,7 @@ def main():
     test_tratar_nome_com_espacos()
     test_tratar_nome_sem_nome()
     test_pedir_tipo_saudacao_tenta_ate_ser_valido()
+    test_pedir_tipo_saudacao_aceita_sair()
     print("Todos os testes passaram.")
 
 
