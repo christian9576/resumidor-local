@@ -31,8 +31,9 @@ Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para
 
 ## Estrutura do código
 
+- `tratar_nome(nome)`: remove espaços no começo/fim e formata o nome com iniciais maiúsculas.
+- `criar_saudacao(nome)`: devolve a mensagem correta.
 - `main()`: coordena o fluxo do programa.
-- `criar_saudacao(nome)`: recebe um nome e devolve a mensagem correta.
 
 ## Conceitos aprendidos até agora
 
