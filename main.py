@@ -1,4 +1,4 @@
-nome = input("Qual é o seu nome? ")
+nome = input("Qual é o seu nome? ").strip()
 
 if nome == "":
     print("Você não digitou um nome. Rode o programa novamente.")
