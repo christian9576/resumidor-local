@@ -41,22 +41,33 @@ def pedir_tipo_saudacao():
             print("Tipo de saudação inválido. Use 'formal' ou 'informal'.")
 
 
+def deseja_continuar():
+    resposta = input("Deseja criar outra saudação? (s/n): ").strip().lower()
+    return resposta == "s"
+
+
 def main():
     mostrar_cabecalho()
-    nome = input("Qual é o seu nome? ")
 
-    if deve_sair(nome):
-        print("Programa encerrado.")
-        return
+    while True:
+        nome = input("Qual é o seu nome? ")
 
-    nome = tratar_nome(nome)
-    tipo = pedir_tipo_saudacao()
+        if deve_sair(nome):
+            print("Programa encerrado.")
+            return
 
-    if deve_sair(tipo):
-        print("Programa encerrado.")
-        return
+        nome = tratar_nome(nome)
+        tipo = pedir_tipo_saudacao()
 
-    print(criar_saudacao(nome, tipo))
+        if deve_sair(tipo):
+            print("Programa encerrado.")
+            return
+
+        print(criar_saudacao(nome, tipo))
+
+        if not deseja_continuar():
+            print("Programa encerrado.")
+            return
 
 
 if __name__ == "__main__":
