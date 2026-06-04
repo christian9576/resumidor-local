@@ -46,13 +46,11 @@ Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para
 
 ## Estrutura do código
 
-- `TIPOS_VALIDOS`: lista com os tipos de saudação aceitos.
-- `tipo_valido(tipo)`: verifica se o tipo informado está entre os tipos aceitos.
-- `deve_sair(texto)`: verifica se o usuário digitou `sair`.
-- `tratar_nome(nome)`: limpa e formata o nome.
-- `criar_saudacao(nome, tipo)`: devolve a mensagem correta.
-- `pedir_tipo_saudacao()`: pede o tipo até receber uma opção válida ou `sair`.
-- `main()`: coordena o fluxo do programa.
+- `main.py`: entrada da CLI, responsável por `input()`, `print()` e fluxo do programa.
+- `saudacoes.py`: contém as regras de saudação, validação e tratamento.
+- `test_main.py`: contém os testes automatizados simples.
+- `README.md`: documentação do projeto.
+- `.gitignore`: ignora arquivos automáticos do Python.
 
 ## Conceitos aprendidos até agora
 
