@@ -2,9 +2,9 @@
 
 ## O que o programa faz
 
-Este projeto pede o nome do usuário no terminal e mostra uma saudação.
+Este projeto é uma mini CLI que pede o nome do usuário no terminal e mostra uma saudação.
 
-O programa também remove espaços no começo e no fim do nome e formata as palavras com letra inicial maiúscula.
+O programa mostra um cabeçalho, remove espaços no começo e no fim do nome e formata as palavras com letra inicial maiúscula.
 
 ## Como rodar no terminal
 
@@ -23,6 +23,7 @@ python test_main.py
 ## Exemplo de uso
 
 ```text
+=== Saudação com Nome ===
 Qual é o seu nome? christian frank
 Olá, Christian Frank. Bem-vindo à sua jornada builder.
 ```
