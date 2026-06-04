@@ -17,11 +17,21 @@ def mostrar_cabecalho():
     print("=== Saudação com Nome ===")
 
 
+def pedir_tipo_saudacao():
+    while True:
+        tipo = input("Tipo de saudação (formal/informal): ").strip().lower()
+
+        if tipo == "formal" or tipo == "informal":
+            return tipo
+        else:
+            print("Tipo de saudação inválido. Use 'formal' ou 'informal'.")
+
+
 def main():
     mostrar_cabecalho()
     nome = input("Qual é o seu nome? ")
     nome = tratar_nome(nome)
-    tipo = input("Tipo de saudação (formal ou informal): ").strip().lower()
+    tipo = pedir_tipo_saudacao()
     print(criar_saudacao(nome, tipo))
 
 
