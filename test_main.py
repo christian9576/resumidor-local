@@ -13,6 +13,11 @@ def test_criar_saudacao_formal():
     assert resultado == "Olá, Christian. Seja bem-vindo à sua jornada builder."
 
 
+def test_criar_saudacao_motivacional():
+    resultado = criar_saudacao("Christian", "motivacional")
+    assert resultado == "Olá, Christian. Continue construindo sua jornada builder."
+
+
 def test_criar_saudacao_tipo_invalido():
     resultado = criar_saudacao("Christian", "alegre")
     assert resultado == "Tipo de saudação inválido. Use 'formal' ou 'informal'."
@@ -42,6 +47,7 @@ def test_deve_sair():
 def test_tipo_valido():
     assert tipo_valido("formal") == True
     assert tipo_valido("informal") == True
+    assert tipo_valido("motivacional") == True
     assert tipo_valido("banana") == False
 
 
@@ -62,6 +68,7 @@ def test_pedir_tipo_saudacao_aceita_sair():
 def main():
     test_criar_saudacao_informal()
     test_criar_saudacao_formal()
+    test_criar_saudacao_motivacional()
     test_criar_saudacao_tipo_invalido()
     test_criar_saudacao_sem_nome()
     test_tratar_nome_com_espacos()

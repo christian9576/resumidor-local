@@ -1,4 +1,4 @@
-TIPOS_VALIDOS = ["formal", "informal"]
+TIPOS_VALIDOS = ["formal", "informal", "motivacional"]
 
 
 def tratar_nome(nome):
@@ -20,6 +20,8 @@ def criar_saudacao(nome, tipo):
         return f"Olá, {nome}. Seja bem-vindo à sua jornada builder."
     elif tipo == "informal":
         return f"Olá, {nome}. Bem-vindo à sua jornada builder."
+    elif tipo == "motivacional":
+        return f"Olá, {nome}. Continue construindo sua jornada builder."
     else:
         return "Tipo de saudação inválido. Use 'formal' ou 'informal'."
 
