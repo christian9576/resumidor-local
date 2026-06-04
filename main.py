@@ -1,3 +1,6 @@
 nome = input("Qual é o seu nome? ")
 
-print(f"Olá, {nome}. Bem-vindo à sua jornada builder.")
+if nome == "":
+    print("Você não digitou um nome. Rode o programa novamente.")
+else:
+    print(f"Olá, {nome}. Bem-vindo à sua jornada builder.")
