@@ -1,9 +1,16 @@
+TIPOS_VALIDOS = ["formal", "informal"]
+
+
 def tratar_nome(nome):
     return nome.strip().title()
 
 
 def deve_sair(texto):
     return texto.strip().lower() == "sair"
+
+
+def tipo_valido(tipo):
+    return tipo in TIPOS_VALIDOS
 
 
 def criar_saudacao(nome, tipo):
@@ -26,7 +33,7 @@ def pedir_tipo_saudacao():
     while True:
         tipo = input("Tipo de saudação (formal/informal): ").strip().lower()
 
-        if tipo == "formal" or tipo == "informal" or deve_sair(tipo):
+        if tipo_valido(tipo) or deve_sair(tipo):
             return tipo
         else:
             print("Tipo de saudação inválido. Use 'formal' ou 'informal'.")
