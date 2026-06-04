@@ -29,9 +29,9 @@ Tipo de saudação (formal ou informal): informal
 Olá, Christian Frank. Bem-vindo à sua jornada builder.
 ```
 
-Para usar a opção informal, digite `informal`.
+O tipo de saudação aceita apenas `formal` ou `informal`.
 
-Para usar a opção formal, digite `formal`.
+Se o usuário digitar outro valor, o programa avisa e pergunta novamente.
 
 Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para rodar novamente.
 
@@ -39,6 +39,7 @@ Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para
 
 - `tratar_nome(nome)`: remove espaços no começo/fim e formata o nome com iniciais maiúsculas.
 - `criar_saudacao(nome, tipo)`: devolve a mensagem correta.
+- `pedir_tipo_saudacao()`: pede o tipo até receber `formal` ou `informal`.
 - `main()`: coordena o fluxo do programa.
 
 ## Conceitos aprendidos até agora

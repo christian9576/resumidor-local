@@ -1,4 +1,6 @@
-from main import criar_saudacao, tratar_nome
+from unittest.mock import patch
+
+from main import criar_saudacao, pedir_tipo_saudacao, tratar_nome
 
 
 def test_criar_saudacao_informal():
@@ -31,6 +33,13 @@ def test_tratar_nome_sem_nome():
     assert resultado == ""
 
 
+def test_pedir_tipo_saudacao_tenta_ate_ser_valido():
+    with patch("builtins.input", side_effect=["banana", "formal"]), patch("builtins.print"):
+        resultado = pedir_tipo_saudacao()
+
+    assert resultado == "formal"
+
+
 def main():
     test_criar_saudacao_informal()
     test_criar_saudacao_formal()
@@ -38,6 +47,7 @@ def main():
     test_criar_saudacao_sem_nome()
     test_tratar_nome_com_espacos()
     test_tratar_nome_sem_nome()
+    test_pedir_tipo_saudacao_tenta_ate_ser_valido()
     print("Todos os testes passaram.")
 
 
