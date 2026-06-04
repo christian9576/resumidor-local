@@ -15,6 +15,7 @@ def criar_saudacao(nome, tipo):
 
 def mostrar_cabecalho():
     print("=== Saudação com Nome ===")
+    print("Escolha uma saudação formal ou informal.")
 
 
 def pedir_tipo_saudacao():
