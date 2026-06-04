@@ -7,4 +7,5 @@ def main():
         print(f"Olá, {nome}. Bem-vindo à sua jornada builder.")
 
 
-main()
+if __name__ == "__main__":
+    main()
