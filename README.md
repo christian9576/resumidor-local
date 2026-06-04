@@ -33,13 +33,16 @@ O tipo de saudação aceita apenas `formal` ou `informal`.
 
 Se o usuário digitar outro valor, o programa avisa e pergunta novamente.
 
+O usuário pode digitar `sair` na pergunta do nome ou na pergunta do tipo de saudação para encerrar o programa.
+
 Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para rodar novamente.
 
 ## Estrutura do código
 
-- `tratar_nome(nome)`: remove espaços no começo/fim e formata o nome com iniciais maiúsculas.
+- `deve_sair(texto)`: verifica se o usuário digitou `sair`.
+- `tratar_nome(nome)`: limpa e formata o nome.
 - `criar_saudacao(nome, tipo)`: devolve a mensagem correta.
-- `pedir_tipo_saudacao()`: pede o tipo até receber `formal` ou `informal`.
+- `pedir_tipo_saudacao()`: pede o tipo até receber uma opção válida ou `sair`.
 - `main()`: coordena o fluxo do programa.
 
 ## Conceitos aprendidos até agora
