@@ -12,6 +12,14 @@ O programa também remove espaços no começo e no fim do nome e formata as pala
 python main.py
 ```
 
+## Como rodar os testes
+
+Os testes ficam no arquivo `test_main.py`.
+
+```bash
+python test_main.py
+```
+
 ## Exemplo de uso
 
 ```text
