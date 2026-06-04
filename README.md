@@ -21,6 +21,11 @@ Olá, Christian Frank. Bem-vindo à sua jornada builder.
 
 Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para rodar novamente.
 
+## Estrutura do código
+
+- `main()`: coordena o fluxo do programa.
+- `criar_saudacao(nome)`: recebe um nome e devolve a mensagem correta.
+
 ## Conceitos aprendidos até agora
 
 - Usar `input()` para receber dados do usuário.
