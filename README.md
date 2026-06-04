@@ -39,6 +39,8 @@ Se o usuário não digitar um nome, o programa mostra uma mensagem avisando para
 
 ## Estrutura do código
 
+- `TIPOS_VALIDOS`: lista com os tipos de saudação aceitos.
+- `tipo_valido(tipo)`: verifica se o tipo informado está entre os tipos aceitos.
 - `deve_sair(texto)`: verifica se o usuário digitou `sair`.
 - `tratar_nome(nome)`: limpa e formata o nome.
 - `criar_saudacao(nome, tipo)`: devolve a mensagem correta.
