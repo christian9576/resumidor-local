@@ -2,6 +2,10 @@ def tratar_nome(nome):
     return nome.strip().title()
 
 
+def deve_sair(texto):
+    return texto.strip().lower() == "sair"
+
+
 def criar_saudacao(nome, tipo):
     if nome == "":
         return "Você não digitou um nome. Rode o programa novamente."
@@ -22,7 +26,7 @@ def pedir_tipo_saudacao():
     while True:
         tipo = input("Tipo de saudação (formal/informal): ").strip().lower()
 
-        if tipo == "formal" or tipo == "informal" or tipo == "sair":
+        if tipo == "formal" or tipo == "informal" or deve_sair(tipo):
             return tipo
         else:
             print("Tipo de saudação inválido. Use 'formal' ou 'informal'.")
@@ -32,14 +36,14 @@ def main():
     mostrar_cabecalho()
     nome = input("Qual é o seu nome? ")
 
-    if nome.strip().lower() == "sair":
+    if deve_sair(nome):
         print("Programa encerrado.")
         return
 
     nome = tratar_nome(nome)
     tipo = pedir_tipo_saudacao()
 
-    if tipo == "sair":
+    if deve_sair(tipo):
         print("Programa encerrado.")
         return
 
