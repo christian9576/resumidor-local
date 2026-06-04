@@ -7,8 +7,10 @@ def criar_saudacao(nome, tipo):
         return "Você não digitou um nome. Rode o programa novamente."
     elif tipo == "formal":
         return f"Olá, {nome}. Seja bem-vindo à sua jornada builder."
-    else:
+    elif tipo == "informal":
         return f"Olá, {nome}. Bem-vindo à sua jornada builder."
+    else:
+        return "Tipo de saudação inválido. Use 'formal' ou 'informal'."
 
 
 def mostrar_cabecalho():
