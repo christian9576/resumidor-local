@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
-from main import criar_saudacao, deseja_continuar, deve_sair, pedir_tipo_saudacao, tipo_valido, tratar_nome
+from main import deseja_continuar, pedir_tipo_saudacao
+from saudacoes import criar_saudacao, deve_sair, tipo_valido, tratar_nome
 
 
 def test_criar_saudacao_informal():
