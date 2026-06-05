@@ -1,5 +1,7 @@
 # Saudação com Nome
 
+Guia de aprendizado: [GUIA_MODULO_1.md](GUIA_MODULO_1.md)
+
 ## O que o programa faz
 
 Este projeto é uma mini CLI que pede o nome do usuário no terminal e mostra uma saudação informal, formal ou motivacional.
