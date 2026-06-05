@@ -2,42 +2,62 @@
 
 ## 1. Objetivo do módulo
 
-O objetivo deste modulo foi aprender o ciclo basico de desenvolvimento usando Python, Codex, Git, GitHub e testes.
+O objetivo deste módulo foi aprender o ciclo básico de desenvolvimento usando Python, Codex, Git, GitHub e testes.
 
-A ideia nao era criar um sistema grande. O foco foi entender como um projeto nasce pequeno, ganha organizacao aos poucos e passa a ter um fluxo mais profissional: escrever codigo, executar no terminal, testar, revisar mudancas, salvar no Git e enviar para o GitHub.
+A ideia não era criar um sistema grande. O foco foi entender como um projeto nasce pequeno, ganha organização aos poucos e passa a ter um fluxo mais profissional: escrever código, executar no terminal, testar, revisar mudanças, salvar no Git e enviar para o GitHub.
 
-Este projeto comecou como uma saudacao simples em Python e evoluiu para uma mini CLI organizada. Isso mostra um modelo importante: projetos reais nao precisam nascer completos. Eles podem evoluir por pequenas melhorias.
+Este projeto começou como uma saudação simples em Python e evoluiu para uma mini CLI organizada. Isso mostra um modelo importante: projetos reais não precisam nascer completos. Eles podem evoluir por pequenas melhorias.
 
 ## 2. O que foi construído
 
-Foi criada uma mini CLI de saudacao. CLI significa "interface de linha de comando", ou seja, um programa usado pelo terminal.
+Foi criada uma mini CLI de saudação. CLI significa "interface de linha de comando", ou seja, um programa usado pelo terminal.
 
 O programa permite:
 
-- pedir o nome do usuario
-- escolher entre saudacao informal, formal e motivacional
-- usar a opcao `sair`
-- repetir o fluxo para criar varias saudacoes
-- validar entradas digitadas pelo usuario
+- pedir o nome do usuário
+- escolher entre saudação informal, formal e motivacional
+- usar a opção `sair`
+- repetir o fluxo para criar várias saudações
+- validar entradas digitadas pelo usuário
 - rodar testes automatizados simples
 
-Na pratica, o usuario executa o programa, responde perguntas no terminal e recebe uma mensagem de saudacao como resultado.
+Na prática, o usuário executa o programa, responde perguntas no terminal e recebe uma mensagem de saudação como resultado.
 
 ## 3. Estrutura final do projeto
 
 O projeto ficou separado em arquivos com responsabilidades diferentes:
 
-- `main.py`: ponto de entrada da CLI. E o arquivo que conversa com o usuario usando `input()` e `print()`. Tambem organiza o fluxo do programa.
-- `saudacoes.py`: arquivo com a logica principal das saudacoes. Ele concentra regras, tratamento de texto e validacoes.
+- `main.py`: ponto de entrada da CLI. É o arquivo que conversa com o usuário usando `input()` e `print()`. Também organiza o fluxo do programa.
+- `saudacoes.py`: arquivo com a lógica principal das saudações. Ele concentra regras, tratamento de texto e validações.
 - `test_main.py`: arquivo com testes automatizados simples para conferir se o programa se comporta como esperado.
-- `README.md`: documentacao principal do projeto. Explica o que o programa faz, como rodar e como testar.
-- `.gitignore`: arquivo que diz ao Git quais arquivos ou pastas devem ser ignorados, como arquivos automaticos do Python.
+- `README.md`: documentação principal do projeto. Explica o que o programa faz, como rodar e como testar.
+- `.gitignore`: arquivo que diz ao Git quais arquivos ou pastas devem ser ignorados, como arquivos automáticos do Python.
 
-Essa separacao ajuda a manter o projeto mais facil de entender. A interface fica em um lugar, a logica fica em outro e os testes ficam separados.
+Essa separação ajuda a manter o projeto mais fácil de entender. A interface fica em um lugar, a lógica fica em outro e os testes ficam separados.
 
-## 4. Conceitos de terminal
+## 4. Linha do tempo do projeto
 
-O terminal e o lugar onde chamamos programas por comandos.
+A evolução aproximada do projeto foi:
+
+- `print()` simples
+- `input()` para pedir o nome
+- validação de nome vazio
+- uso de `strip()`, `title()` e `lower()`
+- criação de funções
+- uso de `main()`
+- padrão `if __name__ == "__main__"`
+- testes com `assert`
+- criação de `.gitignore`
+- tipos de saudação
+- opção `sair`
+- múltiplas saudações na mesma execução
+- separação da lógica em `saudacoes.py`
+
+Essa linha do tempo é útil porque mostra que o projeto não ficou melhor de uma vez. Ele melhorou por etapas pequenas, cada uma adicionando um aprendizado.
+
+## 5. Conceitos de terminal
+
+O terminal é o lugar onde chamamos programas por comandos.
 
 Quando digitamos:
 
@@ -53,205 +73,205 @@ Quando digitamos:
 python test_main.py
 ```
 
-estamos pedindo ao Python para executar os testes que estao em `test_main.py`.
+estamos pedindo ao Python para executar os testes que estão em `test_main.py`.
 
-Existe uma diferenca importante entre abrir um arquivo e executar um arquivo:
+Existe uma diferença importante entre abrir um arquivo e executar um arquivo:
 
-- abrir um arquivo: ver ou editar o conteudo no VS Code
-- executar um arquivo: pedir para o computador rodar aquele codigo
+- abrir um arquivo: ver ou editar o conteúdo no VS Code
+- executar um arquivo: pedir para o computador rodar aquele código
 
-No VS Code, voce pode estar olhando para `main.py`, mas isso nao significa que o programa esta rodando. Para rodar, voce precisa executar o comando no terminal.
+No VS Code, você pode estar olhando para `main.py`, mas isso não significa que o programa está rodando. Para rodar, você precisa executar o comando no terminal.
 
-## 5. Conceitos de Python aprendidos
+## 6. Conceitos de Python aprendidos
 
-### Variaveis
+### Variáveis
 
-Variaveis guardam valores para serem usados depois.
+Variáveis guardam valores para serem usados depois.
 
-Exemplo mental: uma variavel e uma caixinha com nome. Dentro dela pode estar um texto, um numero ou outro valor.
+Exemplo mental: uma variável é uma caixinha com nome. Dentro dela pode estar um texto, um número ou outro valor.
 
 ### Constantes
 
-Constantes tambem guardam valores, mas representam algo que nao deve mudar durante o programa.
+Constantes também guardam valores, mas representam algo que não deve mudar durante o programa.
 
-Em Python, por convencao, nomes de constantes costumam ficar em letras maiusculas.
+Em Python, por convenção, nomes de constantes costumam ficar em letras maiúsculas.
 
 ### `input()`
 
-`input()` serve para receber texto digitado pelo usuario no terminal.
+`input()` serve para receber texto digitado pelo usuário no terminal.
 
 ### `print()`
 
-`print()` serve para mostrar informacoes no terminal.
+`print()` serve para mostrar informações no terminal.
 
-### Funcoes
+### Funções
 
-Funcoes sao blocos de codigo com nome. Elas ajudam a organizar o programa e evitar repeticao.
+Funções são blocos de código com nome. Elas ajudam a organizar o programa e evitar repetição.
 
-Uma funcao pode receber dados, processar esses dados e devolver um resultado.
+Uma função pode receber dados, processar esses dados e devolver um resultado.
 
-### Parametros
+### Parâmetros
 
-Parametros sao as entradas de uma funcao.
+Parâmetros são as entradas de uma função.
 
-Se a funcao fosse uma pequena maquina, os parametros seriam aquilo que colocamos dentro dela para trabalhar.
+Se a função fosse uma pequena máquina, os parâmetros seriam aquilo que colocamos dentro dela para trabalhar.
 
 ### `return`
 
-`return` e a saida de uma funcao. Ele devolve um valor para quem chamou a funcao.
+`return` é a saída de uma função. Ele devolve um valor para quem chamou a função.
 
 ### `if` / `else`
 
-`if` e `else` permitem tomar decisoes.
+`if` e `else` permitem tomar decisões.
 
 Exemplo mental:
 
 ```text
-se isso acontecer, faca uma coisa
-caso contrario, faca outra
+se isso acontecer, faça uma coisa
+caso contrário, faça outra
 ```
 
 ### `while`
 
-`while` cria repeticao enquanto uma condicao for verdadeira.
+`while` cria repetição enquanto uma condição for verdadeira.
 
-No projeto, esse conceito aparece na ideia de repetir o fluxo para criar novas saudacoes.
+No projeto, esse conceito aparece na ideia de repetir o fluxo para criar novas saudações.
 
 ### Listas
 
-Listas guardam varios valores em uma mesma estrutura.
+Listas guardam vários valores em uma mesma estrutura.
 
-Elas sao uteis quando queremos representar um conjunto de opcoes ou dados relacionados.
+Elas são úteis quando queremos representar um conjunto de opções ou dados relacionados.
 
-### Metodos de texto
+### Métodos de texto
 
-Alguns metodos importantes usados ou discutidos:
+Alguns métodos importantes usados ou discutidos:
 
-- `strip()`: remove espacos no comeco e no fim de um texto
-- `title()`: coloca as palavras com letra inicial maiuscula
-- `lower()`: transforma o texto em letras minusculas
+- `strip()`: remove espaços no começo e no fim de um texto
+- `title()`: coloca as palavras com letra inicial maiúscula
+- `lower()`: transforma o texto em letras minúsculas
 
-Esses metodos ajudam a tratar entradas do usuario, porque pessoas podem digitar com espacos extras ou letras em formatos diferentes.
+Esses métodos ajudam a tratar entradas do usuário, porque pessoas podem digitar com espaços extras ou letras em formatos diferentes.
 
 ### `import`
 
-`import` permite usar codigo que esta em outro arquivo.
+`import` permite usar código que está em outro arquivo.
 
-No projeto, isso ajuda a separar a logica em `saudacoes.py` e usar essa logica a partir de `main.py` ou dos testes.
+No projeto, isso ajuda a separar a lógica em `saudacoes.py` e usar essa lógica a partir de `main.py` ou dos testes.
 
 ### `assert`
 
-`assert` e usado em testes para verificar se uma condicao e verdadeira.
+`assert` é usado em testes para verificar se uma condição é verdadeira.
 
 Exemplo mental:
 
 ```text
 eu espero que o resultado seja X
-se nao for, o teste deve falhar
+se não for, o teste deve falhar
 ```
 
 ### Mock e patch
 
 `mock` e `patch` ajudam a simular comportamentos durante testes.
 
-No caso de uma CLI, eles podem ser usados para simular respostas do usuario ao `input()`, sem precisar digitar manualmente toda vez que o teste roda.
+No caso de uma CLI, eles podem ser usados para simular respostas do usuário ao `input()`, sem precisar digitar manualmente toda vez que o teste roda.
 
-## 6. Modelos mentais importantes
+## 7. Modelos mentais importantes
 
-### Entrada -> tratamento -> logica -> saida
+### Entrada -> tratamento -> lógica -> saída
 
-Esse e um modelo simples para entender programas:
+Esse é um modelo simples para entender programas:
 
-- entrada: o que vem de fora, como o nome digitado pelo usuario
-- tratamento: limpeza e padronizacao, como `strip()`, `title()` ou `lower()`
-- logica: as regras do programa
-- saida: aquilo que o programa mostra ou devolve
+- entrada: o que vem de fora, como o nome digitado pelo usuário
+- tratamento: limpeza e padronização, como `strip()`, `title()` ou `lower()`
+- lógica: as regras do programa
+- saída: aquilo que o programa mostra ou devolve
 
-### Funcao = maquina pequena
+### Função = máquina pequena
 
-Uma funcao pode ser vista como uma pequena maquina.
+Uma função pode ser vista como uma pequena máquina.
 
-Voce entrega algo para ela, ela trabalha internamente e depois entrega um resultado.
+Você entrega algo para ela, ela trabalha internamente e depois entrega um resultado.
 
-### Parametros = entradas da funcao
+### Parâmetros = entradas da função
 
-Parametros sao os dados que voce passa para uma funcao trabalhar.
+Parâmetros são os dados que você passa para uma função trabalhar.
 
-### `return` = saida da funcao
+### `return` = saída da função
 
-`return` e o resultado que sai da funcao.
+`return` é o resultado que sai da função.
 
-### Interface diferente de logica
+### Interface diferente de lógica
 
-Interface e a parte que conversa com o usuario. Neste projeto, isso acontece principalmente com `input()` e `print()`.
+Interface é a parte que conversa com o usuário. Neste projeto, isso acontece principalmente com `input()` e `print()`.
 
-Logica e a parte que decide o que fazer com os dados.
+Lógica é a parte que decide o que fazer com os dados.
 
-Separar interface e logica deixa o codigo mais facil de testar, reaproveitar e modificar.
+Separar interface e lógica deixa o código mais fácil de testar, reaproveitar e modificar.
 
-### Resposta do Codex = hipotese
+### Resposta do Codex = hipótese
 
-A resposta do Codex deve ser tratada como uma hipotese.
+A resposta do Codex deve ser tratada como uma hipótese.
 
-Ela pode estar correta, mas precisa ser revisada e testada. O Codex ajuda a acelerar o trabalho, mas o builder continua responsavel por validar o resultado.
+Ela pode estar correta, mas precisa ser revisada e testada. O Codex ajuda a acelerar o trabalho, mas o builder continua responsável por validar o resultado.
 
-### Teste no terminal = validacao
+### Teste no terminal = validação
 
-Rodar o programa no terminal confirma se ele funciona na pratica.
+Rodar o programa no terminal confirma se ele funciona na prática.
 
-Rodar os testes confirma se partes importantes continuam funcionando depois das mudancas.
+Rodar os testes confirma se partes importantes continuam funcionando depois das mudanças.
 
 ### Commit = ponto seguro
 
-Um commit e um ponto salvo no historico do projeto.
+Um commit é um ponto salvo no histórico do projeto.
 
-Ele funciona como um marco: "ate aqui, essa versao fazia sentido".
+Ele funciona como um marco: "até aqui, essa versão fazia sentido".
 
-### Push = enviar historico para o GitHub
+### Push = enviar histórico para o GitHub
 
 `push` envia os commits locais para o GitHub.
 
-O commit salva no Git local. O push publica esse historico no repositorio remoto.
+O commit salva no Git local. O push publica esse histórico no repositório remoto.
 
-## 7. Workflow com Codex
+## 8. Workflow com Codex
 
-Um bom ciclo de trabalho com Codex e:
+Um bom ciclo de trabalho com Codex é:
 
-1. Pedir uma mudanca pequena.
+1. Pedir uma mudança pequena.
 2. Revisar o diff.
 3. Testar manualmente no terminal.
 4. Rodar os testes automatizados.
-5. So depois salvar no Git.
+5. Só depois salvar no Git.
 
-Esse fluxo evita acumular muitas mudancas sem entender o que aconteceu.
+Esse fluxo evita acumular muitas mudanças sem entender o que aconteceu.
 
-Tambem existe uma regra importante:
+Também existe uma regra importante:
 
-Quando for so duvida, peca ao Codex para explicar e diga: "nao altere nenhum arquivo".
+Quando for só dúvida, peça ao Codex para explicar e diga: "não altere nenhum arquivo".
 
-Isso deixa claro que voce quer aprendizado ou orientacao, nao edicao no projeto.
+Isso deixa claro que você quer aprendizado ou orientação, não edição no projeto.
 
-## 8. Workflow com Git e GitHub
+## 9. Workflow com Git e GitHub
 
-Git e a ferramenta que controla o historico do projeto na sua maquina.
+Git é a ferramenta que controla o histórico do projeto na sua máquina.
 
-GitHub e a plataforma online onde voce pode guardar e compartilhar esse historico.
+GitHub é a plataforma online onde você pode guardar e compartilhar esse histórico.
 
 Comandos importantes:
 
 - `git status`: mostra o estado atual do projeto
-- `git add`: coloca arquivos na area de preparacao para o commit
-- `git commit`: salva um ponto no historico local
+- `git add`: coloca arquivos na área de preparação para o commit
+- `git commit`: salva um ponto no histórico local
 - `git push`: envia commits locais para o GitHub
-- `git log --oneline`: mostra o historico de commits de forma resumida
-- `git restore`: descarta mudancas em arquivos quando voce quer voltar ao ultimo estado salvo
+- `git log --oneline`: mostra o histórico de commits de forma resumida
+- `git restore`: descarta mudanças em arquivos quando você quer voltar ao último estado salvo
 
 Diferença entre commit e push:
 
-- commit: salva no historico local
-- push: envia esse historico para o GitHub
+- commit: salva no histórico local
+- push: envia esse histórico para o GitHub
 
-Ciclo padrao:
+Ciclo padrão:
 
 ```bash
 git status
@@ -263,71 +283,91 @@ git status
 
 Esse ciclo ajuda a trabalhar com calma: olhar o estado, preparar arquivos, salvar, enviar e conferir de novo.
 
-## 9. Erros e aprendizados importantes
+## 10. Erros e aprendizados importantes
 
-### Arquivo nao salvo no VS Code
+### Arquivo não salvo no VS Code
 
-Se o arquivo foi editado, mas nao salvo, o terminal pode executar uma versao antiga.
+Se o arquivo foi editado, mas não salvo, o terminal pode executar uma versão antiga.
 
-Antes de testar, confira se o arquivo esta salvo.
+Antes de testar, confira se o arquivo está salvo.
 
 ### `main.py` laranja ou modificado
 
-No VS Code, um arquivo marcado como modificado indica que ha alteracoes ainda nao salvas no Git.
+No VS Code, um arquivo marcado como modificado indica que há alterações ainda não salvas no Git.
 
-Isso nao e necessariamente um problema. E apenas um sinal de que o arquivo mudou.
+Isso não é necessariamente um problema. É apenas um sinal de que o arquivo mudou.
 
 ### Diff
 
-Diff e a comparacao entre o que existia antes e o que mudou agora.
+Diff é a comparação entre o que existia antes e o que mudou agora.
 
-Revisar o diff e uma das melhores formas de aprender, porque mostra exatamente o que foi alterado.
+Revisar o diff é uma das melhores formas de aprender, porque mostra exatamente o que foi alterado.
 
 ### Arquivo untracked
 
-Um arquivo untracked e um arquivo novo que o Git ainda nao esta acompanhando.
+Um arquivo untracked é um arquivo novo que o Git ainda não está acompanhando.
 
-Ele aparece no `git status` ate voce decidir adiciona-lo com `git add` ou ignora-lo.
+Ele aparece no `git status` até você decidir adicioná-lo com `git add` ou ignorá-lo.
 
 ### `__pycache__` e `.gitignore`
 
-`__pycache__` e uma pasta automatica criada pelo Python.
+`__pycache__` é uma pasta automática criada pelo Python.
 
-Ela nao faz parte do codigo que voce escreve. Por isso, normalmente deve ficar no `.gitignore`.
+Ela não faz parte do código que você escreve. Por isso, normalmente deve ficar no `.gitignore`.
 
 ### Aviso "file is newer" no VS Code
 
-Esse aviso pode aparecer quando o arquivo no disco esta mais novo do que a versao aberta no editor.
+Esse aviso pode aparecer quando o arquivo no disco está mais novo do que a versão aberta no editor.
 
-Isso significa que alguma mudanca aconteceu fora daquela aba do VS Code.
+Isso significa que alguma mudança aconteceu fora daquela aba do VS Code.
 
 ### Cuidado com Overwrite
 
 Overwrite significa sobrescrever.
 
-Se voce sobrescrever sem conferir, pode perder mudancas.
+Se você sobrescrever sem conferir, pode perder mudanças.
 
 ### Usar Compare antes de sobrescrever
 
-Quando houver conflito entre versoes, use Compare antes de sobrescrever.
+Quando houver conflito entre versões, use Compare antes de sobrescrever.
 
-Comparar permite ver as diferencas e escolher com mais seguranca o que manter.
+Comparar permite ver as diferenças e escolher com mais segurança o que manter.
 
-## 10. Checklist para projetos futuros
+## 11. O que eu já consigo fazer depois deste módulo
+
+Depois deste módulo, eu já consigo:
+
+- criar um projeto Python simples
+- rodar arquivos pelo terminal
+- usar Codex com escopo pequeno e bem definido
+- revisar diff antes de aceitar uma mudança
+- testar manualmente o programa no terminal
+- criar testes simples com `assert`
+- usar `git status`, `git add`, `git commit` e `git push`
+- publicar um projeto no GitHub
+- manter `README.md` e guias de estudo atualizados
+
+Essa lista serve como um lembrete prático: o Módulo 1 não foi só sobre Python. Ele também treinou o ciclo de trabalho de um projeto pequeno.
+
+## 12. Checklist para projetos futuros
 
 - Definir um MVP pequeno.
-- Criar a estrutura inicial.
-- Rodar manualmente no terminal.
-- Criar testes.
-- Revisar o diff.
-- Fazer commits pequenos.
-- Manter o README atualizado.
-- Enviar para o GitHub.
+- Criar a estrutura inicial do projeto.
+- Rodar o programa manualmente no terminal.
+- Fazer uma mudança por vez.
+- Revisar o diff antes de continuar.
+- Criar testes simples para as regras principais.
+- Rodar os testes depois de mudanças importantes.
+- Fazer commits pequenos e com mensagens claras.
+- Manter o `README.md` atualizado.
+- Manter guias de estudo atualizados quando o projeto evoluir.
+- Enviar commits para o GitHub.
+- Conferir o `git status` no final.
 
-## 11. Ponte para o Módulo 2
+## 13. Ponte para o Módulo 2
 
-O proximo modulo sera um organizador de notas local.
+O próximo módulo será um organizador de notas local.
 
-O foco sera aprender persistencia de dados usando arquivos. Em vez de o programa apenas receber dados e mostrar uma resposta no terminal, ele tambem vai salvar informacoes para serem usadas depois.
+O foco será aprender persistência de dados usando arquivos. Em vez de o programa apenas receber dados e mostrar uma resposta no terminal, ele também vai salvar informações para serem usadas depois.
 
-Esse e um passo importante: sair de programas que "esquecem tudo" quando terminam e comecar a criar ferramentas que mantem dados entre execucoes.
+Esse é um passo importante: sair de programas que "esquecem tudo" quando terminam e começar a criar ferramentas que mantêm dados entre execuções.
